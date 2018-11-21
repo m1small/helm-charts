@@ -2,12 +2,12 @@
 ## ref: https://hub.docker.com/r/bitnami/wordpress/tags/
 ##
 apiVersion: extensions/v1beta1
-image: bitnami/wordpress:4.9.8
+image: @@IMAGE@@
 
 ## Specify the number of replicas
 ## If using more than one (replicas are recommended for production), you will also need to provide a ReadWriteMany PVC with a storageClass of "nfs"
 ## more on line 193 under "persistence"
-replicaCount: 3
+replicaCount: 1
 
 ## enable istio sidecar
 ## ref: https://istio.io/docs/setup/kubernetes/sidecar-injection/#configuration-options
@@ -22,28 +22,28 @@ imagePullPolicy: IfNotPresent
 ## User of the application
 ## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
 ##
-wordpressUsername: user
+wordpressUsername: mattsmall
 
 ## Application password
 ## Defaults to a random 10-character alphanumeric string if not set
 ## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
 ##
-# wordpressPassword:
+wordpressPassword: Bitnami1234
 
 ## Admin email
 ## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
 ##
-wordpressEmail: user@example.com
+wordpressEmail: mattsmall@bitnami.com
 
 ## First name
 ## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
 ##
-wordpressFirstName: FirstName
+wordpressFirstName: Matt
 
 ## Last name
 ## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
 ##
-wordpressLastName: LastName
+wordpressLastName: Small
 
 ## Blog name
 ## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables
